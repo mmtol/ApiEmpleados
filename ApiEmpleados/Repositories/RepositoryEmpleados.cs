@@ -22,5 +22,22 @@ namespace ApiEmpleados.Repositories
         {
             return await context.Empleados.FirstOrDefaultAsync(z => z.IdEmpleado == id);
         }
+
+        public async Task<List<string>> GetOficiosAsync()
+        {
+            var consulta = (from datos in context.Empleados
+                            select datos.Oficio).Distinct();
+            return await consulta.ToListAsync();
+        }
+
+        public async Task<List<Empleado>> GetEmpleadosOficioAsync(string oficio)
+        {
+            return await context.Empleados.Where(x => x.Oficio == oficio).ToListAsync();
+        }
+
+        public async Task<List<Empleado>> GetEmpleadosSalarioDepartamentoAsync(int salario, int departamento)
+        {
+            return await context.Empleados.Where(x => x.Salario >= salario && x.Departamento == departamento).ToListAsync();
+        }
     }
 }
