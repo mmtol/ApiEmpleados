@@ -1,6 +1,6 @@
-﻿using ApiEmpleados.Models;
-using ApiEmpleados.Repositories;
+﻿using ApiEmpleados.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using NugetApiModelsMMT.Models;
 
 namespace ApiEmpleados.Controllers
 {

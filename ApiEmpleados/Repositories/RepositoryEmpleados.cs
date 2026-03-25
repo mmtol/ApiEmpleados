@@ -1,6 +1,6 @@
 ﻿using ApiEmpleados.Data;
-using ApiEmpleados.Models;
 using Microsoft.EntityFrameworkCore;
+using NugetApiModelsMMT.Models;
 
 namespace ApiEmpleados.Repositories
 {

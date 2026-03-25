@@ -1,5 +1,5 @@
-﻿using ApiEmpleados.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using NugetApiModelsMMT.Models;
 
 namespace ApiEmpleados.Data
 {
